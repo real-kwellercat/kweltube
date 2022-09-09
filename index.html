@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>kweltube - lightweight youtube viewer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/page2.html">Other page</a>
+    </nav>
+    <main>
+      <script>
+        document
+          .getElementById('input')
+          .addEventListener('change', function () {
+            var media = URL.createObjectURL(
+              'https://youtube.com/watch?v=' +
+                document.getElementById('input').innerHTML
+            );
+            var video = document.getElementById('video');
+            video.src = media;
+            video.style.display = 'block';
+            video.play();
+          });
+      </script>
+      <label for="input">Type an ID here:</label>
+      <input type="text" id="input" name="input_video" />
+      <video
+        id="video"
+        width="320"
+        height="240"
+        controls
+        style="display: none"
+      ></video>
+    </main>
+  </body>
+</html>
