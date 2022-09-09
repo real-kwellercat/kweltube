@@ -1,3 +1,3 @@
-# web-platform-xqaens
+# kweltube
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-xqaens)
+## a very lightweight video viewer
