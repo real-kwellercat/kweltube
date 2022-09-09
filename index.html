@@ -22,24 +22,20 @@
           .getElementById('input')
           .addEventListener('change', function () {
             var media = URL.createObjectURL(
-              'https://youtube.com/watch?v=' +
+              'https://youtube.com/embed/' +
                 document.getElementById('input').innerHTML
             );
             var video = document.getElementById('video');
             video.src = media;
-            video.style.display = 'block';
-            video.play();
           });
       </script>
       <label for="input">Type an ID here:</label>
       <input type="text" id="input" name="input_video" />
-      <video
+      <iframe
         id="video"
         width="320"
         height="240"
-        controls
-        style="display: none"
-      ></video>
+      ></iframe>
     </main>
   </body>
 </html>
